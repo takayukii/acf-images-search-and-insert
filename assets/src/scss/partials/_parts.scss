@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+.aisai-searchform {
+  width: 300px;
+
+  .btn {
+	position: relative;
+	top: 1px;
+	height: 34px;
+  }
+}
+
+.aisai-result-item {
+  position: relative;
+  width: $search-item_size;
+  height: $search-item_size;
+
+  background: #f0f0f0;
+
+  img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	max-width: $search-item_size;
+	max-height: $search-item_size;
+  }
+
+  &:hover {
+
+	box-shadow:0px 0px 2px 1px #d9d9d9;
+	-moz-box-shadow:0px 0px 2px 1px #d9d9d9;
+	-webkit-box-shadow:0px 0px 2px 1px #d9d9d9;
+
+	img {
+	  opacity: 0.8;
+	}
+  }
+}
+
+.aisai-result-item--dragging {
+  @extend .aisai-result-item;
+  cursor: move;
+  img {
+	opacity: 0.5;
+  }
+}
+
+.aisai-acf-item {
+
+  position: relative;
+  text-align: center;
+
+  p {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: grey;
+  }
+
+  .aisai-acf-item__img {
+	position: relative;
+	width: $acf-item_size;
+	height: $acf-item_size;
+
+	border: 2px dashed lightgrey;
+
+	img {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  margin: auto;
+	  max-width: $acf-item_size - 10px;
+	  max-height: $acf-item_size - 10px;
+	}
+	p {
+	  display: table-cell;
+	  vertical-align: middle;
+	  width: $acf-item_size;
+	  height: $acf-item_size;
+
+	  color: lightgrey;
+	}
+
+	.aisai-acf-item__revert {
+	  display: none;
+
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+
+	  text-decoration: none;
+
+	  a {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		margin: auto;
+		color: #337ab7;
+
+		span {
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+
+		  margin: auto;
+		  height: 10px;
+		}
+	  }
+
+	  div {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		background: white;
+		opacity: 0.5;
+	  }
+	}
+
+	&:hover {
+	  .aisai-acf-item__revert {
+		display: block;
+	  }
+	}
+  }
+}
+
+.aisai-acf-item--dragging {
+  @extend .aisai-acf-item;
+  .aisai-acf-item__img {
+	opacity: 0.5;
+	border: 2px solid #337ab7;
+  }
+}
+
+.aisai-acf-item--received {
+  @extend .aisai-acf-item;
+  .aisai-acf-item__img {
+	border: 2px solid #337ab7;
+  }
+
+  &:hover {
+	.aisai-acf-item__img {
+	  box-shadow:0px 0px 3px 2px #d9d9d9;
+	  -moz-box-shadow:0px 0px 3px 2px #d9d9d9;
+	  -webkit-box-shadow:0px 0px 3px 2px #d9d9d9;
+	}
+  }
+}

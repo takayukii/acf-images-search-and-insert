@@ -1,0 +1,108 @@
+# Copyright (C) 2016 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/acf-images-search-and-insert\n"
+"POT-Creation-Date: 2016-03-29 07:18:23+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: acf_images_search_and_insert.php:82 settings.php:84 settings.php:94
+msgid "ACF Images Search And Insert"
+msgstr ""
+
+#: acf_images_search_and_insert.php:120
+msgid "Search"
+msgstr ""
+
+#: acf_images_search_and_insert.php:121
+msgid "Search for"
+msgstr ""
+
+#: acf_images_search_and_insert.php:122
+msgid "DRAG AND DROP HERE"
+msgstr ""
+
+#: acf_images_search_and_insert.php:123
+msgid "CANCEL"
+msgstr ""
+
+#: acf_images_search_and_insert.php:124
+msgid "Upload and Insert"
+msgstr ""
+
+#: acf_images_search_and_insert.php:125
+msgid ""
+"Completed to insert image in ACF image field. Please keep in mind that you "
+"need to update the post."
+msgstr ""
+
+#: settings.php:84
+msgid "ACF Images Search And Insert Settings"
+msgstr ""
+
+#: settings.php:169
+msgid "Images Per Page"
+msgstr ""
+
+#: settings.php:186 settings.php:223
+msgid "API Key"
+msgstr ""
+
+#: settings.php:192
+msgid "Licenses"
+msgstr ""
+
+#: settings.php:202
+msgid "Sort"
+msgstr ""
+
+#: settings.php:229
+msgid "Language"
+msgstr ""
+
+#: settings.php:243
+msgid "Image Type"
+msgstr ""
+
+#: settings.php:247 settings.php:266
+msgid "All"
+msgstr ""
+
+#: settings.php:252
+msgid "Photos"
+msgstr ""
+
+#: settings.php:257
+msgid "Vectors"
+msgstr ""
+
+#: settings.php:262
+msgid "Orientation"
+msgstr ""
+
+#: settings.php:271
+msgid "Hozizontal"
+msgstr ""
+
+#: settings.php:276
+msgid "Vertical"
+msgstr ""
