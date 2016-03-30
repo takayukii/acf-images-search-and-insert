@@ -7,11 +7,11 @@ Stable tag: 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin makes easy to insert images into ACF image fields using Pixabay and Flickr image search. If you want to build a picture book with WordPress and ACF, this plugin will help.
+This plugin makes easy to insert images into ACF image fields using Pixabay and Flickr image search.
 
 == Description ==
 
-This plugin extends WP Media modal and enable to search CC0 images using Pixabay and Flickr. You can insert found images into ACF image fields only by drug and drop.
+This plugin extends WP Media modal and enable to search CC0 images using Pixabay and Flickr. You can insert found images into ACF image fields only by drug and drop. If you want to build a picture book with WordPress and ACF, this plugin will help.
 
 [Demo Video](https://www.youtube.com/watch?v=Es5-oQg2LVE)
 
