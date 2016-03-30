@@ -253,12 +253,3 @@ class Acf_Images_Search_And_Insert {
 	}
 }
 new Acf_Images_Search_And_Insert();
-
-add_filter( 'aisai_initial_keyword', 'handle_aisai_initial_keyword', 10, 1 );
-function handle_aisai_initial_keyword( $post_id ) {
-	return get_field( 'english_name', $post_id );
-}
-add_filter( 'aisai_caption', 'handle_aisai_caption', 10, 4 );
-function handle_aisai_caption( $caption, $title, $site_url, $powered_by ) {
-	return "Powered by {$powered_by}, check original url {$site_url}";
-}
