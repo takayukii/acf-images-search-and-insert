@@ -3,7 +3,7 @@ Contributors: takayukii
 Tags: ACF, images, search, admin
 Requires at least: 4.0
 Tested up to: 4.4
-Stable tag: 1.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,23 +31,9 @@ Feel free to contact me at takayukii@gmail.com
 
 There're two filter hooks are available.
 
-aisai_initial_keyword - for setting default search keyword
+* aisai_initial_keyword - for setting default search keyword
+* aisai_caption - for setting image caption
 
-```
-add_filter( 'aisai_initial_keyword', 'handle_aisai_initial_keyword', 10, 1 );
-function handle_aisai_initial_keyword( $post_id ) {
-	return get_field( 'english_name', $post_id );
-}
-```
-
-aisai_caption - for setting image caption
-
-```
-add_filter( 'aisai_caption', 'handle_aisai_caption', 10, 4 );
-function handle_aisai_caption( $caption, $title, $site_url, $powered_by ) {
-	return "Powered by {$powered_by}, check original url {$site_url}";
-}
-```
 
 == Screenshots ==
 
@@ -55,7 +41,7 @@ function handle_aisai_caption( $caption, $title, $site_url, $powered_by ) {
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.2 =
 * First release
 
 == Upgrade Notice ==

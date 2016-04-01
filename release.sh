@@ -141,10 +141,12 @@ echo "Exporting the HEAD of master from git to the trunk of SVN"
 git checkout-index -a -f --prefix=$SVNPATH/trunk/
 
 # This is my own build script
-cp -r $CURRENTDIR/node_modules $SVNPATH/trunk/
 cd $SVNPATH/trunk/
 npm install
 npm run compile
+
+if [ $? != 0 ]; then echo "Build failed.."; exit 1; fi
+
 rm -rf {bin,config,tests,node_modules,*.js,*.json,*.dist,assets/src,release.sh}
 
 # If submodule exist, recursively check out their indexes
