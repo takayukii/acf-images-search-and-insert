@@ -71,7 +71,8 @@ class Acf_Images_Search_And_Insert_Settings {
 	 * Acf_Images_Search_And_Insert_Settings constructor.
 	 */
 	function __construct() {
-		if ( empty( get_option( 'aisai_options' ) )  ) {
+		$options = get_option( 'aisai_options' );
+		if ( empty( $options )  ) {
 			update_option( 'aisai_options', $this->default_options );
 		}
 		add_action( 'admin_menu', [ $this, 'aisai_add_settings_menu' ] );

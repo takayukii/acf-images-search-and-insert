@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: ACF Images Search and Insert
- * Version: 0.1-alpha
+ * Version: 1.0
  * Description: This plugin makes easy to insert images into ACF image fields using Pixabay and Flickr image search. If you want to build a picture book with WordPress and ACF, this plugin will help.
  * Author: Takayuki Imanishi
  * Author URI: http://takayukii.me
