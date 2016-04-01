@@ -32,8 +32,7 @@ Feel free to contact me at takayukii@gmail.com
 There're two filter hooks are available.
 
 * aisai_initial_keyword - for setting default search keyword
-* aisai_caption - for setting image caption
-
+* aisai_image_caption - for setting image caption
 
 == Screenshots ==
 
@@ -41,13 +40,11 @@ There're two filter hooks are available.
 
 == Changelog ==
 
-= 1.0.2 =
+= 1.1 =
 * First release
 
 == Upgrade Notice ==
 
-
 == Arbitrary section ==
 
-
-
+Source code is hosted at [GitHub](https://github.com/takayukii/acf-images-search-and-insert).

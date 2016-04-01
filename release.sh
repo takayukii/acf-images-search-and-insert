@@ -147,7 +147,7 @@ npm run compile
 
 if [ $? != 0 ]; then echo "Build failed.."; exit 1; fi
 
-rm -rf {bin,config,tests,node_modules,*.js,*.json,*.dist,assets/src,release.sh}
+rm -rf {bin,config,tests,node_modules,*.js,*.json,*.xml.dist,src,release.sh}
 
 # If submodule exist, recursively check out their indexes
 if [ -f ".gitmodules" ]

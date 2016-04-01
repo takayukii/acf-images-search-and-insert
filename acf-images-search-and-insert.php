@@ -13,7 +13,7 @@
 
 /**
  * This plugin is created as Single Page Web Application (SPA) using React + Redux, hence most of view logics
- * including search are implemented in JavaScript. Please check assets/src/js directory.
+ * including search are implemented in JavaScript. Please check src/js directory.
  *
  * Available commands:
  * npm run watch - builds js and scss when developing
@@ -31,7 +31,7 @@
  *   return get_field( 'english_name', $post_id );
  * }
  *
- * aisai_caption
+ * aisai_image_caption
  * add_filter( 'aisai_caption', 'handle_aisai_caption', 10, 4 );
  * function handle_aisai_caption( $caption, $title, $site_url, $powered_by ) {
  *   return "Powered by {$powered_by}, check original url {$site_url}";
@@ -96,7 +96,7 @@ class Acf_Images_Search_And_Insert {
 	function media_aisai_tab() {
 		?>
 		<div id="root" style="height: 100%"></div>
-		<script src="<?php echo plugin_dir_url( __FILE__ ) . 'assets/dist/js/app.js'; ?>"></script>
+		<script src="<?php echo plugin_dir_url( __FILE__ ) . 'dist/js/app.js'; ?>"></script>
 		<?php
 	}
 
@@ -106,6 +106,9 @@ class Acf_Images_Search_And_Insert {
 	 */
 	function enqueue_style_and_scripts() {
 		$keyword = apply_filters( 'aisai_initial_keyword', $_GET['post_id'] );
+		if ( $_GET['post_id'] === $keyword ) {
+			$keyword = '';
+		}
 
 		// Object which should be available in JavaScript as window.aisaiLocal
 		// e.g. window.aisaiLocal.nonces.v
@@ -126,10 +129,10 @@ class Acf_Images_Search_And_Insert {
 			],
 			'options' => get_option( 'aisai_options' ),
 		];
-		wp_register_style( 'aisai-style', plugin_dir_url( __FILE__ ) . '/assets/dist/css/style.css', [], '', 'all' );
+		wp_register_style( 'aisai-style', plugin_dir_url( __FILE__ ) . 'dist/css/style.css', [], '', 'all' );
 		wp_enqueue_style( 'aisai-style' );
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'aisai-vendor-script', plugin_dir_url( __FILE__ ) . 'assets/dist/js/vendor.js', [], '' );
+		wp_enqueue_script( 'aisai-vendor-script', plugin_dir_url( __FILE__ ) . 'dist/js/vendor.js', [], '' );
 		wp_localize_script( 'aisai-vendor-script' , $this->ltd . 'Local' , $localize );
 	}
 
@@ -146,7 +149,7 @@ class Acf_Images_Search_And_Insert {
 			die( 'Parameter url is required' );
 		}
 
-		$caption = apply_filters( 'aisai_caption', $_POST['caption'], $_POST['title'], $_POST['site'], $_POST['poweredBy'] );
+		$caption = apply_filters( 'aisai_image_caption', $_POST['caption'], $_POST['title'], $_POST['site'], $_POST['poweredBy'] );
 
 		$attachment_id = $this->insert_image_by_url( $_POST['url'], $caption );
 		$thumbnail_image = wp_get_attachment_image_src( $attachment_id );

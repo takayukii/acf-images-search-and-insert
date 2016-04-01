@@ -4,7 +4,7 @@
   "main": "Gruntfile.js",
   "author": "Takayuki Imanishi",
   "scripts": {
-    "clean": "rm -rf assets/dist",
+    "clean": "rm -rf dist",
     "watch": "better-npm-run watch",
     "compile": "better-npm-run compile",
     "lint": "eslint . ./",
