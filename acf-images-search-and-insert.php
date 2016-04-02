@@ -1,21 +1,24 @@
 <?php
 /**
  * Plugin Name: ACF Images Search and Insert
- * Version: 1.1.0
+ * Version: 1.1.1
  * Description: This plugin makes easy to insert images into ACF image fields using Pixabay and Flickr image search. If you want to build a picture book with WordPress and ACF, this plugin will help.
  * Author: Takayuki Imanishi
  * Author URI: http://takayukii.me
- * Plugin URI: N/A
+ * Plugin URI: https://wordpress.org/plugins/acf-images-search-and-insert/
  * Text Domain: aisai
- * Domain Path: /langs
+ * Domain Path: /languages
  * @package acf-images-search-and-insert
  */
 
 /**
  * This plugin is created as Single Page Web Application (SPA) using React + Redux, hence most of view logics
- * including search are implemented in JavaScript. Please check src/js directory.
+ * including search are implemented in JavaScript.
  *
- * Available commands:
+ * Source code is hosted at https://github.com/takayukii/acf-images-search-and-insert
+ * Please check src/js directory.
+ *
+ * Available commands for development:
  * npm run watch - builds js and scss when developing
  * npm run compile - builds js and scss for production
  * grunt i18n - generates pot file
@@ -57,7 +60,7 @@ class Acf_Images_Search_And_Insert {
 			'field' => $this->ltd . '_nonce_field',
 			'value' => $this->ltd . '_nonce_value',
 		];
-		$rel_path = dirname( plugin_basename( __FILE__ ) ) . '/langs/';
+		$rel_path = dirname( plugin_basename( __FILE__ ) ) . '/languages/';
 		load_plugin_textdomain( $this->ltd, false, $rel_path );
 		add_action( 'admin_init', [ $this, 'admin_init' ] );
 	}

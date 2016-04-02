@@ -29,7 +29,7 @@ module.exports = function( grunt ) {
     makepot: {
       target: {
         options: {
-          domainPath: '/langs',
+          domainPath: '/languages',
           mainFile: 'acf-images-search-and-insert.php',
           potFilename: 'aisai.pot',
           potHeaders: {
